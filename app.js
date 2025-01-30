@@ -28,3 +28,15 @@ function atualizarLista() {
         listaAmigos.appendChild(li);
     });
 }
+
+function sortearAmigo() {
+    if(amigos.length == 0) {
+        alert("Sem nomes na lista!");
+    }
+
+    let indiceAleatorio = parseInt(Math.random() * amigos.length);
+    
+    let resultado = document.getElementById("resultado");
+
+    resultado.innerHTML = `O nome sorteado foi: ${amigos[indiceAleatorio]}`;
+}
