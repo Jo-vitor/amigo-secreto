@@ -12,5 +12,19 @@ function adicionarAmigo() {
     console.log(amigos);
     
     campoAmigo.value = "";
-   
+    
+    atualizarLista();
+}
+
+function atualizarLista() {
+    let listaAmigos = document.getElementById("listaAmigos");
+    listaAmigos.innerHTML = "";
+
+    amigos.forEach((amigo) => {
+        let li = document.createElement("li");
+
+        li.appendChild(document.createTextNode(amigo));
+
+        listaAmigos.appendChild(li);
+    });
 }
