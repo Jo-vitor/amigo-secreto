@@ -9,7 +9,6 @@ function adicionarAmigo() {
     }
 
     amigos.push(campoAmigo.value);
-    console.log(amigos);
     
     campoAmigo.value = "";
     
